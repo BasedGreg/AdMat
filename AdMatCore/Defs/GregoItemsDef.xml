@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Graphite</defName>
+    <label>graphite</label>
+    <description>A crystallized form of carbon that occurs as a mineral in some rocks.</description>
+    <graphicData>
+      <texPath>Things/Item/Graphite</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>First</resourceReadoutPriority>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
+    <statBases>
+      <MarketValue>1</MarketValue>
+      <Mass>0.4</Mass>
+      <StuffPower_Armor_Sharp>0.42</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.26</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>1.06</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>1</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.6</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>1.5</deepCommonality>
+    <deepCountPerPortion>40</deepCountPerPortion>
+    <deepLumpSizeRange>
+      <min>12</min>
+      <max>20</max>
+    </deepLumpSizeRange>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <color>(51,51,51)</color>
+      <commonality>0.9</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>0.4</MaxHitPoints>
+        <Flammability>0.5</Flammability>
+      </statFactors>
+      <smeltable>true</smeltable>
+    </stuffProps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>Plastene</defName>
+    <label>plastene</label>
+    <description>Recently, a thinktank of highly-respected glitterworld scientists discovered a method for forming an alloy made of plasteel and graphene. Together this new, lighter material has incredible strength as well as exception heat and electrical conductivity.</description>
+    <graphicData>
+      <texPath>Things/Item/Plastene</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>30</MarketValue>
+      <Mass>0.18</Mass>
+      <StuffPower_Armor_Sharp>4.78</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>3.12</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>5.08</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>23</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>24</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.7</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.9</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.00001</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(44,58,60)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>5.8</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0.01</Flammability>
+        <WorkToMake>6.2</WorkToMake>
+				<WorkToBuild>4.2</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.75</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+      <smeltable>true</smeltable>
+    </stuffProps>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  
+    <ThingDef ParentName="ResourceBase">
+    <defName>Graphene</defName>
+    <label>graphene sheets</label>
+    <description>A strong, highly conductive material made up of extremely thin sheets of carbon.</description>
+    <graphicData>
+      <texPath>Things/Item/Graphene</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>8</MarketValue>
+      <Mass>0.06</Mass>
+      <StuffPower_Armor_Sharp>1.65</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.92</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>3.08</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>30</StuffPower_Insulation_Heat>
+	  <MaxHitPoints>190</MaxHitPoints>
+      <MarketValue>8</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Textiles</li>
+      </categories>
+      <commonality>0.05</commonality>
+      <color>(54,54,54)</color>
+      <statFactors>
+        <Flammability>0.1</Flammability>
+        <WorkToMake>3.2</WorkToMake>
+        <MeleeWeapon_CooldownMultiplier>0.75</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+      <smeltable>true</smeltable>
+    </stuffProps>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>GrapheneCartridge</defName>
+    <label>chemical vapor cartridge</label>
+    <description>A specialized cartridge with a very precise sample of fuel and graphite powder. Used in the chemical vapor depositor to produce graphene.</description>
+    <graphicData>
+      <texPath>Things/Item/Cartridge</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>30</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.3</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+  
+        <ThingDef ParentName="ResourceBase">
+    <defName>PlasteneFilament</defName>
+    <label>nano-printer filament</label>
+    <description>Two coils, one plasteel, the other graphene. These are fed into the catalytic nano-micron printer to produce plastene.</description>
+    <graphicData>
+      <texPath>Things/Item/Filament</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>17</MarketValue>
+      <Mass>0.6</Mass>
+      <Flammability>0.1</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+    </statBases>
+    <intricate>true</intricate>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+  </ThingDef>
+    
+  <ThingDef ParentName="BenchBase">
+    <defName>AdvancedFabricator</defName>
+    <label>advanced materials fabricator</label>
+    <description>A work station for assembling complex components that are either used independently or are used to form a more advanced material.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/AdvancedFabricator/AdvancedFabricator</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <costList>
+      <Steel>70</Steel>
+	  <Plasteel>80</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+	  <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>4200</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <recipes>
+      <li>Make_GrapheneCartridge</li>
+	  <li>Make_PlasteneFilament</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>false</shortCircuitInRain>
+        <basePowerConsumption>350</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(73,123,138,0)</glowColor>
+      </li>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>AdvancedMaterials</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+    </placeWorkers>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>GrapheneVat</defName>
+    <label>chemical vapor depositor</label>
+    <description>By taking 100% pure graphite power, mixing it with chemfuel, then running it through a chemical processor, this device mass produces graphene.</description>
+    <thingClass>AdMat.Building_GrapheneVat</thingClass>
+    <graphicData>
+      <texPath>Things/Building/GrapheneVat/GrapheneVat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <statBases>
+      <WorkToBuild>4100</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+    </statBases>
+    <costList>
+      <Plasteel>65</Plasteel>
+	  <ComponentSpacer>6</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>-1</minSafeTemperature>
+        <maxSafeTemperature>32</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00001</progressPerDegreePerTick>
+      </li>
+    </comps>
+    <tickerType>Rare</tickerType>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisites>
+      <li>AdvancedMaterials</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  </Defs>

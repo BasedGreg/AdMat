@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+ <!-- <<<<<<<<<<<<<<<<< GATLING CHARGER >>>>>>>>>>>>>>>> -->
+ <Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChargeRifle</defName>	
+    <label>charge shot</label>    
+	<graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>    
+	<projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <armorPenetrationBase>0.41</armorPenetrationBase>
+      <speed>70</speed>
+    </projectile>	
+  </ThingDef> 
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">  
+    <defName>Gun_chargeGatling</defName>	
+    <label>hulk charger</label>	
+    <description>Also known as the "Hulk", this advanced take on the multi-barrel minigun rains down energy blasts at a tremendous rate. The specialized graphene-plasteel composite shielding around the barrels absorbs heat effectively, allowing this weapon to maintain its rate of fire while still using powerful charge blasts.</description>	
+    <graphicData>
+      <texPath>Things/Ranged/chargeHulk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>	
+    <soundInteract>Interact_ChargeRifle</soundInteract>	
+    <statBases>
+      <WorkToMake>100000</WorkToMake>
+      <Mass>8.5</Mass>
+      <AccuracyTouch>0.15</AccuracyTouch>
+      <AccuracyShort>0.31</AccuracyShort>
+      <AccuracyMedium>0.29</AccuracyMedium>
+      <AccuracyLong>0.27</AccuracyLong>
+      <RangedWeapon_Cooldown>2.3</RangedWeapon_Cooldown>
+    </statBases>	
+    <recipeMaker>
+	  <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+	  <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>		
+    <costList>
+      <Plasteel>140</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+	  <Plastene>40</Plastene>
+    </costList>	
+    <weaponTags>
+      <li>SpacerGun</li>
+	  <li>GunHeavy</li>
+    </weaponTags>	
+    <equippedStatOffsets>
+      <MoveSpeed>-0.20</MoveSpeed>
+    </equippedStatOffsets>	
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ChargeRifle</defaultProjectile>
+        <warmupTime>2.2</warmupTime>
+        <range>28</range>
+        <burstShotCount>25</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>	
+    <tools>
+      <li>
+        <label>barrels</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>	
+  </ThingDef>  
+  
+  <!-- <<<<<<<<<<<<<<< ROCKET HAMMER >>>>>>>>>>>> -->
+  
+	<ThingDef ParentName="Greggo_BaseMeleeWeapon">
+		<defName>MeleeWeapon_RocketHammer</defName>
+		<label>rocket sledge</label>
+		<description>There are few things more deadly than several kilograms of plasteel being rocketed towards ones face.</description>
+		<graphicData>
+			<texPath>Things/Melee/RocketHammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>5</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<costList>
+			<Chemfuel>60</Chemfuel>
+			<Plasteel>90</Plasteel>
+			<Steel>20</Steel>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>80</power>
+				<cooldownTime>3</cooldownTime>
+				<chanceFactor>2</chanceFactor>
+				<armorPenetration>0.4</armorPenetration>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+	<!-- <<<<<<<<<<<<<<<<<< CHARGE SWORD >>>>>>>>>>>>>>>>>>> -->
+	
+	<ThingDef ParentName="Greggo_BaseMeleeWeapon">
+		<defName>ChargeSword</defName>
+		<label>charge blade</label>
+		<description>Melee weapons were thought to be a thing of the past, but with pulse technology also came the invention of the energy sword. The weapon itself is extremely powerful, able to slice thorugh even the strongest armor and the built in gyrostablizer makes this blade feel almost weightless as one swings.</description>
+		<graphicData>
+			<texPath>Things/Melee/ChargeBlade</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<costList>
+			<Plasteel>35</Plasteel>
+			<ComponentSpacer>7</ComponentSpacer>
+		</costList>
+		<statBases>
+			<WorkToMake>45000</WorkToMake>
+			<Mass>3.5</Mass>
+		</statBases>
+		<equippedAngleOffset>-65</equippedAngleOffset>
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+					<li>SaberStab</li>
+				</capacities>
+				<power>19</power>
+				<cooldownTime>0.8</cooldownTime>
+				<armorPenetration>0.7</armorPenetration>
+			</li>
+			<li>
+				<label>edge</label>
+				<capacities>
+					<li>SaberCut</li>
+				</capacities>
+				<power>21</power>
+				<cooldownTime>0.9</cooldownTime>
+				<armorPenetration>0.7</armorPenetration>
+			</li>
+		</tools>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+	</ThingDef>
+	
+<!-- <<<<<<<<<<<<<<<< MJOLNIR >>>>>>>>>>>>>>> -->
+	
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Bullet_Mjolnir</defName>
+    <label>Mjolnir</label>
+    <graphicData>
+      <texPath>Things/Projectile/Mjolnir</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>85</damageAmountBase>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_Mjolnir</defName>
+    <label>Mjolnir</label>
+    <description>Mjolnir, the hammer of the god Thor. A weapon of ultimate power.</description>
+    <graphicData>
+      <texPath>Things/Ranged/Mjolnir</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <statBases>
+      <Mass>4.4</Mass>
+      <AccuracyTouch>0.99</AccuracyTouch>
+      <AccuracyShort>0.99</AccuracyShort>
+      <AccuracyMedium>0.99</AccuracyMedium>
+      <AccuracyLong>0.99</AccuracyLong>
+      <RangedWeapon_Cooldown>2.75</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Mjolnir</defaultProjectile>
+        <warmupTime>0.01</warmupTime>
+        <range>34</range>
+        <soundCast>Interact_BeatFire</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>65</power>
+        <cooldownTime>0.5</cooldownTime>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>80</power>
+        <cooldownTime>0.5</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- <<<<<<<<<<<<< MAGNUM REVOLVER >>>>>>>>>>>> -->
+  
+    <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_magnum</defName>
+    <label>magnum bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>29</damageAmountBase>
+      <stoppingPower>2</stoppingPower>
+      <speed>65</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Magnum</defName>
+    <label>magnum</label>
+    <description>A standard issue bullnose magnum revolver. High level caliber enables high tier damage with the badass style of a revolver.</description>
+    <graphicData>
+      <texPath>Things/Ranged/Magnum</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>1.9</Mass>
+      <AccuracyTouch>0.76</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.59</AccuracyMedium>
+      <AccuracyLong>0.43</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>SimpleGun</li>
+      <li>Revolver</li>
+    </weaponTags>
+    <costList>
+      <Steel>45</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Revolver</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>27</range>
+        <soundCast>Shot_Revolver</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- <<<<<<<<<<<<<<<<<<<<<< CHARGE REVOLVER >>>>>>>>>>>>>>> -->
+	
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_chargeRevolver</defName>	
+    <label>charge shot</label>    
+	<graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>    
+	<projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>32</damageAmountBase>
+	  <stoppingPower>2.5</stoppingPower>
+      <armorPenetrationBase>0.41</armorPenetrationBase>
+      <speed>70</speed>
+    </projectile>	
+  </ThingDef> 
+  
+    <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_chargeRevolver</defName>
+    <label>reducer</label>
+    <description>The quickest draw in the galaxy, this spacer tier revolver uses an entire cartridge for each shot. The resulting effect is a slow yet terribly, powerful shot.</description>
+    <graphicData>
+      <texPath>Things/Ranged/Reducer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Revolver</soundInteract>
+    <statBases>
+      <WorkToMake>29000</WorkToMake>
+      <Mass>1.6</Mass>
+      <AccuracyTouch>0.79</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.62</AccuracyMedium>
+      <AccuracyLong>0.53</AccuracyLong>
+      <RangedWeapon_Cooldown>3.9</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>SpacerGun</li>
+      <li>Revolver</li>
+    </weaponTags>
+    <costList>
+      <Plasteel>45</Plasteel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+	  <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+	  <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>	
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_chargeRevolver</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>30</range>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  
+  <!-- <<<<<<<<<<<<<<<<<< POWER GAUNTLET >>>>>>>>>>>>>>>>> -->
+  
+  	<ThingDef ParentName="Greggo_BaseMeleeWeapon">
+		<defName>MeleeWeapon_PowerGauntlet</defName>
+		<label>power gauntlet</label>
+		<description>For those who enjoy getting close and personal in combat, the power gauntlet is an advanced, charged-powered mechanical fist that can discharge shockwaves when a force is applied: AKA when you punch someone.</description>
+		<graphicData>
+			<texPath>Things/Melee/PowerGauntlet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<WorkToMake>49000</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+		<equippedAngleOffset>-12</equippedAngleOffset>
+		<costList>
+			<Plasteel>55</Plasteel>
+			<ComponentSpacer>5</ComponentSpacer>
+		</costList>
+		<tools>
+			
+			<li>
+				<label>pulse</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Pulse</li>
+				</capacities>
+				<power>37</power>
+				<cooldownTime>3.5</cooldownTime>
+			</li>			
+		</tools>
+		<recipeMaker>
+		  <researchPrerequisite>ChargedShot</researchPrerequisite>
+		  <skillRequirements>
+			<Crafting>10</Crafting>
+		  </skillRequirements>
+		  <recipeUsers Inherit="False">
+			<li>FabricationBench</li>
+		  </recipeUsers>
+		</recipeMaker>	
+	</ThingDef>
+
+</Defs>

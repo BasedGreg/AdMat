@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>Greggo_UnfinishedMeleeWeapon</defName>
+		<label>unfinished weapon</label>
+		<graphicData>
+			<texPath>Things/Item/Unfinished/UnfinishedWeapon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<stuffCategories Inherit="false" />
+	</ThingDef>
+
+	<ThingDef Name="Greggo_BaseMeleeWeapon" Abstract="True" ParentName="BaseWeapon">
+		<smeltable>true</smeltable>
+		<thingCategories>
+			<li>WeaponsMelee</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtWeaponMelee</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<unfinishedThingDef>Greggo_UnfinishedMeleeWeapon</unfinishedThingDef>
+		</recipeMaker>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+	</ThingDef>
+
+	  <ResearchProjectDef>
+    <defName>AdvancedMaterials</defName>
+    <label>advanced materials</label>
+    <description>Research more advanced materials for more advanced devices.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>MultiAnalyzer</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <researchViewX>11</researchViewX>
+    <researchViewY>2.9</researchViewY>
+  </ResearchProjectDef>
+  
+    <WorkGiverDef>
+    <defName>DoBillsAdvancedFabricator</defName>
+    <label>fabricate items</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+      <li>AdvancedFabricator</li>
+    </fixedBillGiverDefs>
+    <verb>fabricate</verb>
+    <gerund>fabricating at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  
+  	<WorkGiverDef>
+    <defName>TakeGrapheneOutOfGrapheneVat</defName>
+    <label>take graphene sheets out of chemical vapor depositor</label>
+    <giverClass>AdMat.WorkGiver_TakeGrapheneOutOfGrapheneVat</giverClass>
+    <workType>Hauling</workType>
+    <verb>take graphene</verb>
+    <gerund>taking graphene from</gerund>
+    <priorityInType>20</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>FillGrapheneVat</defName>
+    <label>load chemical vapor depositor</label>
+    <giverClass>AdMat.WorkGiver_LoadGrapheneVat</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>19</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+</Defs>
